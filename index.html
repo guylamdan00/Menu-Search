@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu-Search.com</title>
-    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=https://www.google.com/webhp?hl=iw&sa=X&ved=0ahUKEwiQhYigjrXxAhVWQUEAHd5cA7cQPAgI">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Name -->
-    <h1>
-      Menu-Search
-    </h1>
-    <!-- Slogan -->
-    <h2>
-      Any menu anywhere
-    </h2>
-  <!-- Search box -->
-  <div class = "search-box">
-    <input class ="search-txt" type="text" name="" placeholder="Search for menus">
-    <a class = "search-btn" href="#">
-      <i class="fas fa-search"></i>
-    </a>
-  </div>
-  <p class = "p1">
-    Ever wished to go out on a fancy dinner but couldn't find the menu of the restaurant your going to?<br>
-    With Menu-Search you can find all the menus you were looking for and more! 
-  </p>
-<!-- **** Footer Section **** -->
-<footer class = "layer1 spacer" class="footer navbar-static-bottom">
-  <a rel="noreferrer" href="#top" class="back-to-top">
-    <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-  </a>
-    </footer>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.google.com/s2/favicons?domain=https://www.google.com/webhp?hl=iw&sa=X&ved=0ahUKEwiQhYigjrXxAhVWQUEAHd5cA7cQPAgI"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main">
+        <!-- Name -->
+        <h1>Menu-Search</h1>
+        <!-- Slogan -->
+        <h2>Any menu anywhere</h2>
+        <search-box-container></search-box-container>
+        <p class="p1">
+          Ever wished to go out on a fancy dinner but couldn't find the menu of
+          the restaurant your going to?<br />
+          With Menu-Search you can find all the menus you were looking for and
+          more!
+        </p>
+      </div>
+      <!-- **** Footer Section **** -->
+      <footer class="layered-waves spacer footer">
+        <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      </footer>
+    </div>
+    <back-to-top></back-to-top>
     <!-- Script -->
+    <script src="SearchBox.js"></script>
+    <script src="BackToTopBtn.js"></script>
     <script src="script.js"></script>
+  </body>
 </html>
