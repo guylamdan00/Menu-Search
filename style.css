@@ -22,42 +22,42 @@ body {
 }
 
 h1 {
-  font-family: Ubuntu, sans-serif;
-  font-size: 100px;
-  color: rgba(0, 0, 0, 1);
-  text-align: center;
-  letter-spacing: 3.5px;
-  margin-top: 15px;
-  text-shadow: 0 5px rgba(0, 0, 0, 0.2);
-}
-
-h2 {
-  /* position: relative;
-    transform: translate(0%, -50%); */
-  font-family: Ubuntu, sans-serif;
+  font-family: Oswald, sans-serif;
   font-size: 50px;
   color: rgba(0, 0, 0, 1);
   text-align: center;
-  letter-spacing: 3.5px;
-  text-shadow: 0 5px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
 }
 
 .buttons-container {
   display: flex;
   align-content: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  background-image:url("jar.jpg");
+  background-size: 1520px;
+  background-position-y: center;
+  height: 30rem;
+}
+
+.txt {
+  margin-top: 25px;
+  font-family: Oswald;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
 }
 
 upload-menu {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-self: center;
+  margin-top: 25px;
+  order: -1;
 }
 
 .upload-button-container {
-  background: #d2d2d2;
+  background: #00000077;
   height: 40px;
   border-radius: 40px;
   padding: 10px;
@@ -76,7 +76,6 @@ upload-menu {
 .upload-menu {
   font-family: Oswald, sans-serif;
   font-weight: bold;
-  color: ;
   font-size: 16px;
 }
 
@@ -91,16 +90,14 @@ input[type="file"] {
   display: none;
 }
 
-
 search-box-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 25px;
+  margin-right: 170px;
   height: 10rem;
 }
 
 .search-box {
-  background: #d2d2d2;
+  background: #00000077;
   height: 40px;
   border-radius: 40px;
   padding: 10px;
@@ -114,6 +111,7 @@ search-box-container {
 
 .search-box:hover > .search-btn {
   background: rgba(255, 255, 255, 0.733);
+  color: #02aab0;
 }
 
 .search-box:hover {
@@ -126,7 +124,6 @@ search-box-container {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #d2d2d2cb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,16 +144,6 @@ search-box-container {
   transition: 0.4s;
   line-height: 40px;
   width: 0px;
-}
-
-.p1 {
-  font-family: Oswald;
-  font-weight: bold;
-  font-size: 30px;
-  letter-spacing: 1px;
-  color: #02aab07c;
-  text-align: center;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
 }
 
 back-to-top {
@@ -222,7 +209,7 @@ back-to-top {
 }
 
 .layered-waves {
-  background-image: url("layered-waves.svg");
+  /* background-image: url("layered-waves.svg"); */
   width: 100%;
 }
 
@@ -233,13 +220,31 @@ back-to-top {
     margin-top: 35px;
   }
 
-  h2 {
-    font-size: 25px;
-    margin-top: 15px;
+  .buttons-container {
+    background-size: 720px;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .p1 {
-    margin: 15px;
-    font-size: 25px;
-  }
+upload-menu {
+  margin-top: 0px;
+  margin-bottom: 150px;
+}
+
+search-box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: -1;
+  margin-right: 0px;
+}
+
+.txt {
+  align-self: flex-start;
+  font-size: 25px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+}
 }
