@@ -1,3 +1,4 @@
+import Axios from "axios";
 
 const backToTopBtn = document.querySelector("back-to-top");
 window.addEventListener("scroll", () => {

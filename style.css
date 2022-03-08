@@ -8,6 +8,7 @@ html {
 body {
   margin: 0;
   background-color: whitesmoke;
+  font-family: Oswald;
 }
 
 .wrapper {
@@ -21,6 +22,59 @@ body {
   flex-direction: column;
 }
 
+nav {
+  background: #02aab0;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  color: azure;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  font-weight: bold;
+  line-height: 80px;
+  margin: -10px 15px;
+}
+
+nav ul li a {
+  color: azure;
+  font-size: 17px;
+  padding: 10px 13px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+  background: #00000077;
+  transition: 0.4s;
+}
+.checkbtn {
+  float: right;
+  font-size: 30px;
+  color: azure;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
 h1 {
   font-family: Oswald, sans-serif;
   font-size: 50px;
@@ -31,63 +85,57 @@ h1 {
 
 .buttons-container {
   display: flex;
-  align-content: center;
-  justify-content: space-between;
   flex-direction: row-reverse;
-  background-image:url("jar.jpg");
+  justify-content: space-between;
+  /* background-image: url("jar.jpg"); */
   background-size: 1520px;
   background-position-y: center;
-  height: 30rem;
+  height: 35rem;
 }
 
 .txt {
+  display: flex;
   margin-top: 25px;
   font-family: Oswald;
   font-weight: bold;
+  color: azure;
   font-size: 30px;
   letter-spacing: 1px;
   text-shadow: 0 1px rgba(0, 0, 0, 0.2);
 }
 
-upload-menu {
-  display: flex;
-  justify-self: center;
-  margin-top: 25px;
-  order: -1;
-}
-
-.upload-button-container {
-  background: #00000077;
-  height: 40px;
-  border-radius: 40px;
-  padding: 10px;
-  transition: 0.4s;
+.cloudinary-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  margin-top: 25px;
+  margin-right: 230px;
+  background: #00000077;
+  height: 40px;
+  border-radius: 20px;
+  padding: 10px;
+  font-family: Oswald;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.4s;
+  order: -1;
 }
 
-.upload-button-container:hover {
+upload-menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-right: 5px;
+  order: -1;
+}
+
+.cloudinary-button:hover {
   background: #d2d2d293;
   transform: translateX(-2px);
 }
 
-.upload-menu {
-  font-family: Oswald, sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.upload-menu:hover {
-  cursor: pointer;
-}
 .fa-upload {
   color: #02aab0;
-}
-
-input[type="file"] {
-  display: none;
 }
 
 search-box-container {
@@ -99,7 +147,7 @@ search-box-container {
 .search-box {
   background: #00000077;
   height: 40px;
-  border-radius: 40px;
+  border-radius: 20px;
   padding: 10px;
   display: inline-block;
 }
@@ -189,6 +237,19 @@ back-to-top {
   transition: 0.3s;
 }
 
+.GRID-CONTAINER {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+  column-gap: 50px;
+  row-gap: 50px;
+}
+
+.GRID-CONTAINER > div {
+  height: 210px;
+  background-image: url("https://kerenagam.co.il/wp-content/uploads/2021/06/Thinking-of-getting-a-cat.png");
+  background-size: cover;
+}
 /* Twitter */
 .fa-twitter {
   color: #55acee;
@@ -215,6 +276,14 @@ back-to-top {
 
 /* media query for tablet or smaller */
 @media screen and (max-width: 1366px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
   h1 {
     font-size: 50px;
     margin-top: 35px;
@@ -228,23 +297,57 @@ back-to-top {
     align-items: center;
   }
 
-upload-menu {
-  margin-top: 0px;
-  margin-bottom: 150px;
-}
+  search-box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: -1;
+    margin-right: 0px;
+  }
 
-search-box-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  order: -1;
-  margin-right: 0px;
-}
+  .cloudinary-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+    margin-bottom: 300px;
+  }
 
-.txt {
-  align-self: flex-start;
-  font-size: 25px;
-  margin-left: 5px;
-  margin-bottom: 15px;
+  .txt {
+    align-self: flex-start;
+    font-size: 25px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+  }
 }
+@media screen and (max-width: 850px) {
+  .checkbtn {
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50fa;
+    top: 80px;
+    left: 100%;
+    text-align: center;
+    transition: all .4s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    margin-right: 80px;
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #02aab0;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
 }
